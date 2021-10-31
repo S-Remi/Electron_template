@@ -1,0 +1,37 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "main": "src/window.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^15.3.0",
+    "electron-builder": "^22.13.1"
+  },
+  "build": {
+    "appId": "com.electron.testapp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "assets",
+      "src",
+      "package.json",
+      "package-lock.json"
+    ],
+    "mac": {
+      "icon": "assets/mac/icon.icns",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "icon": "assets/win/icon.ico",
+      "target": "nsis"
+    },
+    "nsis":{
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
